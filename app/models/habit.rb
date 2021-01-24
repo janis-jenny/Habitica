@@ -1,0 +1,2 @@
+class Habit < ApplicationRecord
+end

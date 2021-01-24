@@ -1,0 +1,2 @@
+class GroupHabit < ApplicationRecord
+end
