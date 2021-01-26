@@ -1,6 +1,6 @@
 module UsersHelper
   def user_params
-    params.require(:user).permit(:name)
+    params.require(:user).permit(:name, :avatar)
   end
 
 =begin   def user_errors

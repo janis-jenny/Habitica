@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :users #, except: [:destroy]
   resources :habits #, only: [:new, :create, :index, :show]
   resources :groups #, only: [:new, :create, :index, :show]
+  get '/external_habits', to: 'habits#external_habits'
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
