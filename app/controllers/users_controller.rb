@@ -14,14 +14,14 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       @user.avatar.attach(params[:user][:avatar])
-      redirect_to login_path
+      redirect_to user_path(session[:user_id])
     else
       render :new
     end
   end
 
   def show
-    #redirect_to root_path if session[:user_id].nil?
+    redirect_to root_path if session[:user_id].nil?
     @user = User.find(params[:id])
   end
   

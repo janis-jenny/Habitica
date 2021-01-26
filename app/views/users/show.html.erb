@@ -1,8 +1,8 @@
 <div class="container">
 
 <div class="header">
-    <img class="profile-picture" src=<%= @user.avatar.attached? ? url_for(@user.avatar) : '/icon.png' %>>
-    <h2 class="username"><%= @user.name %></h2>
+    <img src=<%= @user.avatar.attached? ? url_for(@user.avatar) : '/icon.png' %>>
+    <h2><%= @user.name %></h2>
   </div> 
 
   <ul class="links">
