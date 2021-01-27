@@ -1,0 +1,20 @@
+<%= form_with(model: @habit, local: true) do |f| %>
+<%# <p id="alert"> <%= alert %>
+<%# </p> %> 
+<div>
+  <%= f.label :name, "Name:" %>
+  <%= f.text_field :name %>
+</div>
+  <%# <%= f.number_field :Amount, placeholder: 'Reps' %> 
+<div>
+  <%= f.label :time, "Time:" %>
+  <%= f.number_field :time, placeholder: 'Time(minutes)'%>
+</div> 
+<div>
+  <%= f.label :date, "Date:" %>
+  <%= f.date_field :date %>
+</div>
+<div>
+  <%= f.submit 'Save' %>
+</div>
+<% end %>

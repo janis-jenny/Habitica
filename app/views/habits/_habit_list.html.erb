@@ -1,0 +1,11 @@
+<div>
+<h3>Total Habits:</h3>
+  <span><%= "#{@total_habits} hours" %></span>
+</div>
+<% @habits.each do |habit| %>
+    <div>            
+      <h5><%= habit.name %></h5>
+        <p><%= habit.created_at.strftime("%d %b. %Y") %></p>
+        <p><%= "#{habit.amount} minutes" %></p>
+    </div>
+<% end %>

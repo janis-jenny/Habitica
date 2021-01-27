@@ -1,2 +1,6 @@
-<h1>Habits#new</h1>
-<p>Find me in app/views/habits/new.html.erb</p>
+<div class="banner">
+    <h1>New Habits</h1>
+    <%= link_to "Back", user_path(User.find(session[:user_id]))%>
+</div>  
+
+<p><%= render 'form' %></p>
