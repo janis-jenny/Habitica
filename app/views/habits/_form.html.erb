@@ -5,7 +5,6 @@
   <%= f.label :name, "Name:" %>
   <%= f.text_field :name %>
 </div>
-  <%# <%= f.number_field :Amount, placeholder: 'Reps' %> 
 <div>
   <%= f.label :time, "Time:" %>
   <%= f.number_field :time, placeholder: 'Time(minutes)'%>
@@ -13,6 +12,11 @@
 <div>
   <%= f.label :date, "Date:" %>
   <%= f.date_field :date %>
+</div>
+<div class="field">
+    <%= f.label :repeat_day %>
+    <%= f.collection_select(:repeat_day, RepeatDay.find(:all), :id, :name, {:include_blank => 'Select how many days'}) %>
+</div>
 </div>
 <div>
   <%= f.submit 'Save' %>
