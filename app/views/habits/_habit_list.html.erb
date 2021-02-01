@@ -8,4 +8,7 @@
         <p><%= habit.created_at.strftime("%d %b. %Y") %></p>
         <p><%= "#{habit.time} minutes" %></p>
     </div>
+    <% frequency_days(habit.repeat_days).each do |el| %>
+      <%=el%>
+    <% end %>
 <% end %>

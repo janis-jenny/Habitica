@@ -1,3 +1,4 @@
 class RepeatDay < ApplicationRecord
-  has_many :habits
+  belongs_to :habit
+  belongs_to :user
 end

@@ -9,22 +9,6 @@
   <%= f.label :time, "Time:" %>
   <%= f.number_field :time, placeholder: 'Time(minutes)'%>
 </div> 
-<div>
-  <%= f.label :date, "Date:" %>
-  <%= f.date_field :date %>
-</div>
-<div>
-  <label>Select a day:</label><br>
-  <%= link_to 'Monday', repeat_days_path(day: 'Monday'), method: :post %><br>
-  <%= link_to 'Tuesday', repeat_days_path(day: 'Tuesday'), method: :post %><br>
-  <%= link_to 'Wednesday', repeat_days_path(day: 'Wednesday'), method: :post %><br>
-  <%= link_to 'Thursday', repeat_days_path(day: 'Thursday'), method: :post %><br>
-  <%= link_to 'Friday', repeat_days_path(day: 'Friday'), method: :post %><br>
-  <%= link_to 'Saturday', repeat_days_path(day: 'Saturday'), method: :post %><br>
-  <%= link_to 'Sunday', repeat_days_path(day: 'Sunday'), method: :post %><br>
-</div>
-</div>
-<div>
-  <%= f.submit 'Save' %>
+  <%= f.submit 'Select frequency' %>
 </div>
 <% end %>

@@ -1,9 +1,8 @@
 class HabitsController < ApplicationController
   include HabitsHelper
-  #before_action :authenticate_user, only: %i[new create]
 
   def index
-    @habits = Habit.all
+    @habits = Habit.all.includes(:repeat_days) 
     @total_habits = 0
   end
 
@@ -14,14 +13,14 @@ class HabitsController < ApplicationController
   def create
     @habit = current_user.habits.new(habit_params)
     if @habit.save
-      redirect_to habit_path(@habit)
+      redirect_to @habit
     else
       render :new
     end
   end
 
   def show
-    @habit= Habit.find(params[:id])
+    @habit= Habit.find(habit_id: params[:habit_id])
   end
 
 end

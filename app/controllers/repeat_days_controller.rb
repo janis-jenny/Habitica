@@ -1,6 +1,6 @@
 class RepeatDaysController < ApplicationController
   def create
-    @repeat_days = RepeatDay.new(day: params[:day], user_id: current_user.id)
+    @repeat_days = RepeatDay.new(day: params[:day], user_id: current_user.id, habit_id: params[:habit_id])
     if @repeat_days.save
     else
       render :new
