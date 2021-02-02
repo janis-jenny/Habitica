@@ -11,7 +11,8 @@
   <% frequency_days(habit.repeat_days).each do |el| %>
     <%=el%>
   <% end %>
-  <%= [total_time(habit.repeat_days) << habit.time].map {|a,b| a * b}%> 
+  <%= total_time(habit.repeat_days) << habit.time %>
+  
   
 <% end %>
 
