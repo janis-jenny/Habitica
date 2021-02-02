@@ -22,5 +22,10 @@ class HabitsController < ApplicationController
   def show
     @habit= Habit.find(habit_id: params[:habit_id])
   end
-
+  
+  def external_habits
+    @habits = Habit.all.select do |t|
+     t.groups.empty? && t.user.id == session[:user_id]
+    end 
+  end
 end

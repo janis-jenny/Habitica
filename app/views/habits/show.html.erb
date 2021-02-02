@@ -1,6 +1,7 @@
 <h1>Select Frequency</h1>
 <div>
   <label>Days:</label><br>
+  <%= form_with(model: @habit, local: true) do |f| %>
   <%= link_to 'Monday', repeat_days_path(day: 'Monday', habit_id: @habit.id), method: :post %><br>
   <%= link_to 'Tuesday', repeat_days_path(day: 'Tuesday', habit_id: @habit.id), method: :post %><br>
   <%= link_to 'Wednesday', repeat_days_path(day: 'Wednesday', habit_id: @habit.id), method: :post %><br>
@@ -8,5 +9,6 @@
   <%= link_to 'Friday', repeat_days_path(day: 'Friday', habit_id: @habit.id), method: :post %><br>
   <%= link_to 'Saturday', repeat_days_path(day: 'Saturday', habit_id: @habit.id), method: :post %><br>
   <%= link_to 'Sunday', repeat_days_path(day: 'Sunday', habit_id: @habit.id), method: :post %><br>
+  <% end %>
 </div>
    <%= link_to 'Save', habits_path, method: :get %>

@@ -10,4 +10,10 @@ module HabitsHelper
     end
     return arr.uniq
   end
+
+  def total_time(param)
+    arr = []
+    arr << param.where("DATE(created_at) = ?", Date.today).count 
+    return arr
+  end
 end

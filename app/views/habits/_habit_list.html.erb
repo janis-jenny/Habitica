@@ -1,14 +1,18 @@
 <div>
 <h3>Total Habits:</h3>
-  <span><%= "#{@total_habits} hours" %></span>
+  <span><%="#{@total_habits} hours"%></span>
 </div>
 <% @habits.each do |habit| %>
-    <div>            
-      <h5><%= habit.name %></h5>
-        <p><%= habit.created_at.strftime("%d %b. %Y") %></p>
-        <p><%= "#{habit.time} minutes" %></p>
-    </div>
-    <% frequency_days(habit.repeat_days).each do |el| %>
-      <%=el%>
-    <% end %>
+  <div>            
+    <h5><%= habit.name %></h5>
+      <p><%= habit.created_at.strftime("%d %b. %Y") %></p>
+      <p><%= "#{habit.time} minutes" %></p>
+  </div>
+  <% frequency_days(habit.repeat_days).each do |el| %>
+    <%=el%>
+  <% end %>
+  <%= [total_time(habit.repeat_days) << habit.time].map {|a,b| a * b}%> 
+  
 <% end %>
+
+
