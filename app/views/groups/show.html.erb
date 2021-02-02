@@ -4,6 +4,6 @@
   class= "image" 
   src= <%= @group.avatar.attached? ? url_for(@group.avatar) : '/icon.png' %>
   >
-  <%= link_to "Back", user_path(User.find(session[:user_id])) %>
+  <%= link_to "Back", user_path(current_user) %>
 </div>
 

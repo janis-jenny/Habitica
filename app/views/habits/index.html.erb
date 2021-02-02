@@ -1,7 +1,7 @@
 <div>  
   <div>
     <h1>MY HABITS</h1>
-    <%= link_to "Back", user_path(User.find(session[:user_id])) %>
+    <%= link_to "Back", user_path(current_user) %>
     <%= link_to "Log Out", logout_path, method: :delete %></li>
   </div>
 
