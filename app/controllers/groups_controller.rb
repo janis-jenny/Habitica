@@ -6,11 +6,11 @@ class GroupsController < ApplicationController
   end
   
   def new
-    @group = Group.new
+    @group = current_user.groups.new
   end
   
   def create
-    @group = Group.new(group_params.except(:avatar))
+    @group = current_user.groups.new(group_params)
     if @group.save
       @group.avatar.attach(params[:group][:avatar])
       redirect_to group_path(@group)

@@ -1,0 +1,9 @@
+<div>
+  <h1><%= @group.name.upcase %></h1>
+  <img 
+  class= "image" 
+  src= <%= @group.avatar.attached? ? url_for(@group.avatar) : '/icon.png' %>
+  >
+  <%= link_to "Back", user_path(User.find(session[:user_id])) %>
+</div>
+

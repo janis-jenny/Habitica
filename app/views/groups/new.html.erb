@@ -1,0 +1,19 @@
+<div>
+  <div>
+    <h1>NEW GROUP</h1>
+    <%= link_to "Back", user_path(User.find(session[:user_id])) %>
+  </div>
+
+  <%= form_with(model: @group, local: true) do |form| %>
+    <div>
+      <%= form.label :name, "Name:" %>
+      <%= form.text_field :name %>
+    </div>
+
+    <div>
+      <%= form.label :avatar, "Group Icon:" %>
+      <%= form.file_field :avatar %>
+    </div>
+    <%= form.submit "Create" %>
+  <% end %>
+</div>

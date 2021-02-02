@@ -1,0 +1,31 @@
+<div>
+  <div>
+    <h1>GROUPS</h1>
+    <%= link_to "Back", user_path(User.find(session[:user_id]))%>
+  </div>
+
+  <ul>
+    <% @groups.each do |group| %>
+      <% date = group.created_at.to_date %>
+
+      <div>
+        <% if group.avatar.attached? %>
+          <img src= <%= "#{url_for(group.avatar)}" %>>
+        <% else %>
+          <img src="https://vectorified.com/download-image#default-avatar-icon-21.png">
+        <% end%>
+        
+        <div>
+          <div>
+            <h5><%= group.name %></h5>
+            <p><%= "#{format_date(date)}" %></p>
+          </div>
+        </div>
+      </div>
+      
+    <% end %>
+  </ul>
+
+
+  <%= button_to "New group", new_group_path, method: 'get' %>
+</div>

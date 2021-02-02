@@ -4,7 +4,8 @@ class Group < ApplicationRecord
   has_many :group_habits, dependent: :destroy
   has_many :habits, through: :group_habits
 
-  validates :name, uniqueness: true
+=begin   validates :name, uniqueness: true
   validates :name, presence: true
-  validates :avatar, presence: true
+  validates :avatar, presence: true 
+=end
 end
