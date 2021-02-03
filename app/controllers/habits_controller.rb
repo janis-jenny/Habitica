@@ -1,26 +1,32 @@
 class HabitsController < ApplicationController
   include HabitsHelper
+  include GroupsHelper
 
   def index
     @habits = Habit.all.includes(:repeat_days) 
+    #@habits = Habit.all.select { |h| !h.groups.empty? }
     @total_habits = 0
   end
 
   def new
     @habit = current_user.habits.new
+    @groups = Group.all
   end
 
   def create
     @habit = current_user.habits.new(habit_params)
     if @habit.save
-      redirect_to @habit
+      # unless group_params([:group_id]).to_i.zero?
+        GroupHabit.create(habit_id: @habit.id, group_id: @group.id)
+      # end
+      redirect_to habit_path({id: @habit.id})
     else
       render :new
     end
   end
 
   def show
-    @habit= Habit.find(habit_id: params[:habit_id])
+    @habit = Habit.find(params[:id])
   end
   
   def external_habits
@@ -28,4 +34,5 @@ class HabitsController < ApplicationController
      t.groups.empty? && t.user.id == session[:user_id]
     end 
   end
+
 end

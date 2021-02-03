@@ -1,14 +1,30 @@
 <%= form_with(model: @habit, local: true) do |f| %>
-<%# <p id="alert"> <%= alert %>
-<%# </p> %> 
-<div>
-  <%= f.label :name, "Name:" %>
-  <%= f.text_field :name %>
-</div>
-<div>
-  <%= f.label :time, "Time:" %>
-  <%= f.number_field :time, placeholder: 'Time(minutes)'%>
-</div> 
-  <%= f.submit 'Select frequency' %>
-</div>
+
+  <% unless @groups.nil? || @groups.empty? %>
+      <div>
+        <%= f.label :group_id, "Group:" %>
+
+        <div>
+          <% @groups.each do |group| %>
+            <div class='check_box_option'>
+              <%= f.label :group_id, group.name %>
+              <%= f.check_box(:group_id, {multiple: true}, group.id) %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+  <% end %> 
+
+  </br>
+
+  <div>
+    <%= f.label :name, "Name:" %>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :time, "Time:" %>
+    <%= f.number_field :time, placeholder: 'Time(minutes)'%>
+  </div> 
+    <%= f.submit 'Select frequency' %>
+  </div>
 <% end %>

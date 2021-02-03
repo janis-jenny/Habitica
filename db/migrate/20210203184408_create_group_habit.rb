@@ -1,9 +1,8 @@
-class CreateGroupHabits < ActiveRecord::Migration[6.0]
+class CreateGroupHabit < ActiveRecord::Migration[6.0]
   def change
     create_table :group_habits do |t|
       t.integer :group_id
-      t.string :habit_id
-      t.string :integer
+      t.integer :habit_id
 
       t.timestamps
     end

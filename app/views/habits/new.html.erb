@@ -1,6 +1,6 @@
 <div class="banner">
     <h1>New Habits</h1>
-    <%= link_to "Back", user_path(User.find(session[:user_id]))%>
+    <%= link_to "Back", user_path(current_user)%>
 </div>  
 
 <p><%= render 'form' %></p>
