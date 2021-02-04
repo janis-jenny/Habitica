@@ -4,11 +4,7 @@
 </div>
 
 <% @habits.each do |habit| %>
-  <img
-  src= <%= "#{
-    habit.groups.empty? || !habit.groups.first.avatar.attached? ? 'icon.png' : url_for(habit.groups.first.avatar)
-    }" %>
-  >
+  <img src= <%="#{group_icons(habit)}"%>>
   <div>            
     <h5><%= habit.name %></h5>
       <p><%= "#{format_date(habit.created_at.to_date)}"%></p>
@@ -17,7 +13,7 @@
   <% frequency_days(habit.repeat_days).each do |el| %>
     <%=el%>
   <% end %>
-  <%= total_time(habit.repeat_days) << habit.time %>
+  <%= total_time(habit.repeat_days) << habit.time%>
   
   
 <% end %>

@@ -2,7 +2,7 @@
   
   <img 
   class= "image" 
-  src= <%= @group.avatar.attached? ? url_for(@group.avatar) : '/icon.png' %>
+  src= <%= group_icon(@group) %>
   >
   <br><br>
   <h1>Group: <%= @group.name.upcase %></h1>
@@ -10,6 +10,7 @@
   <h3>Created on: <%= "#{format_date(@group.created_at.to_date)}"%></h3>
   <h3>Created by: <%= @group.user.name%></h3>
   <br>
-  <%= link_to "Back", user_path(current_user) %>
+  <% render 'habits/habit_list' %>
+  <%= link_to raw('<span>Add Habit</span>'), new_habit_path(group: @group.id), class: 'action-btn' %>
 </div>
 

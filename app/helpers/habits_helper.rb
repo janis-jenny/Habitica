@@ -16,4 +16,9 @@ module HabitsHelper
     arr << param.where("DATE(created_at) = ?", Date.today).count 
     return arr
   end
+
+  def group_icons(habit)
+    img = habit.groups.first
+    !img.avatar.attached? ? 'icon.png' : url_for(img.avatar) 
+  end
 end
