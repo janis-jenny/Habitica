@@ -4,8 +4,7 @@
 </div>
 
 <% @habits.each do |habit| %>
-  <img 
-  class="image" 
+  <img
   src= <%= "#{
     habit.groups.empty? || !habit.groups.first.avatar.attached? ? 'icon.png' : url_for(habit.groups.first.avatar)
     }" %>

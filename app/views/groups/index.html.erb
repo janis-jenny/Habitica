@@ -7,25 +7,14 @@
   <ul>
     <% @groups.each do |group| %>
       <% date = group.created_at.to_date %>
-
-      <div>
-        <% if group.avatar.attached? %>
-          <img src= <%= "#{url_for(group.avatar)}" %>>
-        <% else %>
-          <img src="https://vectorified.com/download-image#default-avatar-icon-21.png">
-        <% end%>
-        
-        <div>
-          <div>
-            <h5><%= group.name %></h5>
-            <p><%= "#{format_date(date)}" %></p>
-          </div>
-        </div>
-      </div>
-      
+      <%=link_to group_path(group.id) do %>
+      <%=image_tag(group_icon(group))%>
+      <p><%= group.name %></p>
+      <p>Created on <%=format_date(date)%></p> 
+      <p>Created by <%=group.user.name%></p>
+      <%end%>
     <% end %>
   </ul>
-
 
   <%= button_to "New group", new_group_path, method: 'get' %>
 </div>

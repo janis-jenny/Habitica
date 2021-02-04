@@ -24,4 +24,7 @@ class GroupsController < ApplicationController
     @habits = @group.habits.includes(user: [avatar_attachment: :blob])
   end
 
+  def group_icon
+    
+  end
 end
