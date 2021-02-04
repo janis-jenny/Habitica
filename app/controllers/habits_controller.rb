@@ -10,19 +10,21 @@ class HabitsController < ApplicationController
 
   def new
     @habit = current_user.habits.new
+    @habit.groups.build
     @groups = Group.all
   end
 
   def create
-    @habit = current_user.habits.new(habit_params)
+    
+    @habit = current_user.habits.new(habit_params.select{|key, value| key != 'group_id'})
     if @habit.save
       # unless group_params([:group_id]).to_i.zero?
-        GroupHabit.create(habit_id: @habit.id, group_id: @group.id)
+        GroupHabit.create(habit_id: @habit.id, group_id: habit_params[:group_id])
       # end
       redirect_to habit_path({id: @habit.id})
     else
       render :new
-    end
+    end 
   end
 
   def show

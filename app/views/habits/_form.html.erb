@@ -2,16 +2,10 @@
 
   <% unless @groups.nil? || @groups.empty? %>
       <div>
-        <%= f.label :group_id, "Group:" %>
-
-        <div>
-          <% @groups.each do |group| %>
-            <div class='check_box_option'>
-              <%= f.label :group_id, group.name %>
-              <%= f.check_box(:group_id, {multiple: true}, group.id) %>
-            </div>
-          <% end %>
-        </div>
+        <%= f.label :group_id, "Group:b" %>
+      </div>
+      <div>
+        <%= f.collection_select :group_id, Group.order(:name), :id, :name %>
       </div>
   <% end %> 
 

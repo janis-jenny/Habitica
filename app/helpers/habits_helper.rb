@@ -1,6 +1,6 @@
 module HabitsHelper
   def habit_params
-    params.require(:habit).permit(:name, :amount, :time, :date)
+    params.require(:habit).permit(:name, :amount, :time, :group_id)
   end
 
   def frequency_days(param)
