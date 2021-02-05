@@ -2,12 +2,12 @@
 
   <% unless @groups.nil? || @groups.empty? %>
       <div>
-        <%= f.label :group_id, "Group:b" %>
+        <%= f.label :group_id, "Group:" %>
       </div>
       <div>
         <%= f.collection_select :group_id, Group.order(:name), :id, :name %>
       </div>
-  <% end %> 
+  <% end %>
 
   </br>
 

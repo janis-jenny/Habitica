@@ -1,5 +1,4 @@
 <div>
-  
   <img 
   class= "image" 
   src= <%= group_icon(@group) %>
@@ -10,7 +9,7 @@
   <h3>Created on: <%= "#{format_date(@group.created_at.to_date)}"%></h3>
   <h3>Created by: <%= @group.user.name%></h3>
   <br>
-  <% render 'habits/habit_list' %>
-  <%= link_to raw('<span>Add Habit</span>'), new_habit_path(group: @group.id), class: 'action-btn' %>
+  <%= render 'habits/habit_list', {habits: @habits, total_habits: @total_habits} %>
+  <%= link_to new_habit_path(group: @group.id), class: 'action-btn' %>
 </div>
 

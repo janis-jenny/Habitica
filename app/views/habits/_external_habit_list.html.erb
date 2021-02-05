@@ -1,20 +1,14 @@
-<div>
 <h3>Total Habits:</h3>
   <span><%="#{total_habits} hours"%></span>
-</div>
+
 
 <% habits.each do |habit| %>
-  <div>            
-    <h5><%= habit.name %></h5>
-      <p><%= "#{format_date(habit.created_at.to_date)}"%></p>
-      <p><%= "#{habit.time} minutes" %></p>
-  </div>
+  <img src= <%="#{group_icons(habit)}"%>>           
+  <h5><%= habit.name%></h5>
+    <p><%= "Created at #{format_date(habit.created_at.to_date)}"%></p>
+    <p><%= "#{habit.time} minutes" %></p>
   <% frequency_days(habit.repeat_days).each do |el| %>
     <%=el%>
   <% end %>
   <%= total_time(habit.repeat_days) << habit.time%>
-  
-  
 <% end %>
-
-

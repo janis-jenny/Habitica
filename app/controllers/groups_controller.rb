@@ -22,5 +22,6 @@ class GroupsController < ApplicationController
   def show
     @group = Group.find(params[:id])
     @habits = @group.habits.includes(user: [avatar_attachment: :blob])
+    @total_habits = 0
   end
 end

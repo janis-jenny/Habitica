@@ -33,8 +33,9 @@ class HabitsController < ApplicationController
   
   def external_habits
     @habits = Habit.all.select do |t|
-     t.groups.empty? && t.user.id == session[:user_id]
+     t.user.id == session[:user_id]
     end 
+    @total_habits = 0
   end
 
 end
