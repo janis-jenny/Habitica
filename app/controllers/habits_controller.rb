@@ -4,8 +4,7 @@ class HabitsController < ApplicationController
 
   def index
     @habits = Habit.all.includes(:repeat_days) 
-    #@habits = Habit.all.select { |h| !h.groups.empty? }
-    @total_habits = 0
+   
   end
 
   def new
@@ -18,9 +17,7 @@ class HabitsController < ApplicationController
     
     @habit = current_user.habits.new(habit_params.select{|key, value| key != 'group_id'})
     if @habit.save
-      # unless group_params([:group_id]).to_i.zero?
         GroupHabit.create(habit_id: @habit.id, group_id: habit_params[:group_id])
-      # end
       redirect_to habit_path({id: @habit.id})
     else
       render :new
@@ -35,7 +32,5 @@ class HabitsController < ApplicationController
     @habits = Habit.all.select do |t|
      t.user.id == session[:user_id]
     end 
-    @total_habits = 0
   end
-
 end

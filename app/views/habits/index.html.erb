@@ -5,7 +5,7 @@
     <%= link_to "Log Out", logout_path, method: :delete %></li>
   </div>
 
-  <%= render 'external_habit_list', {habits: @habits, total_habits: @total_habits}  %> 
+  <%= render 'external_habit_list', {habits: @habits}  %> 
 
   <%= button_to "New habit", new_habit_path, method: 'get' %>
 </div>

@@ -1,6 +1,7 @@
 <div>
 <h3>Total Habits:</h3>
-  <span><%="#{total_habits} hours"%></span>
+  <% total_hours %>
+<%="#{total_hours} hours"%>
 </div>
 
 <% habits.each do |habit| %>
@@ -11,10 +12,7 @@
   </div>
   <% frequency_days(habit.repeat_days).each do |el| %>
     <%=el%>
-  <% end %>
-  <%= total_time(habit.repeat_days) << habit.time%>
-  
-  
+  <% end %> 
 <% end %>
 
 

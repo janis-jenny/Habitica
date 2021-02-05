@@ -11,14 +11,8 @@ module HabitsHelper
     return arr.uniq
   end
 
-  def total_time(param)
-    arr = []
-    arr << param.where("DATE(created_at) = ?", Date.today).count 
-    return arr
-  end
-
   def group_icons(habit)
     img = habit.groups.first
-    !img.avatar.attached? ? 'icon.png' : url_for(img.avatar) 
+    !img.avatar.attached? ? 'icon.png' : img.avatar
   end
 end
