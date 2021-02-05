@@ -9,7 +9,7 @@
   <h3>Created on: <%= "#{format_date(@group.created_at.to_date)}"%></h3>
   <h3>Created by: <%= @group.user.name%></h3>
   <br>
-  <%= render 'habits/habit_list', {habits: @habits, total_habits: @total_habits} %>
+  <%= render 'habits/habit_list', {habits: @habits} %>
   <%= link_to 'Add Habit',new_habit_path(group: @group.id), class: 'action-btn' %>
 </div>
 
