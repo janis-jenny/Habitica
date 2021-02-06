@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   helper_method :current_user
   helper_method :format_date
+  helper_method :authenticate_user
 
   def current_user
     User.find_by(id: session[:user_id])
@@ -22,5 +23,9 @@ class ApplicationController < ActionController::Base
     day_of_week = Date::DAYNAMES[date.wday]
 
     "#{day_of_week}, #{day_of_month} #{month} #{year}"
+  end
+
+  def authenticate_user
+    redirect_to login_path if current_user.nil?
   end
 end
