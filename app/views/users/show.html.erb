@@ -1,7 +1,7 @@
 <div class="container">
 
 <div class="header">
-    <%=image_tag(url_for(user_icons(user)))%>
+    <%=image_tag(url_for(user_icons(@user)))%>
     <h2><%= @user.name %></h2>
   </div> 
 

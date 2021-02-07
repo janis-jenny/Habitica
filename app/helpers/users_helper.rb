@@ -4,7 +4,6 @@ module UsersHelper
   end
 
   def user_icons(user)
-    img = user.groups.first
-    !img.avatar.attached? ? 'icon.png' : img.avatar
+    !user.avatar.attached? ? '/icon.png' : user.avatar
   end
 end

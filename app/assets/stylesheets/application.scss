@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 $main-color: #3778c2;
 $second-color: #5fb523;
 $text-color: #434b54;
@@ -7,4 +7,62 @@ body {
   background-color: #fff;
   color: #333;
   margin: 0;
+  
+}
+
+main {
+  width: 28rem;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #f5f5f5;
+}
+
+body,
+p,
+ul
+{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.main-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background: -moz-linear-gradient(45deg, #3b60ce 0%, $main-color 50%, #2651CA 100%);
+  background: -webkit-linear-gradient(45deg, #3b60ce 0%, $main-color 50%, #2651CA 100%);
+  background: linear-gradient(45deg, #3b60ce 0%, $main-color 50%, #2651CA 100%);
+
+  .title {
+    position: absolute;
+    top: 35%;
+    font-size: 2.5rem;
+    color: $text-color;
+    font-family: 'Permanent Marker', cursive;
+    letter-spacing: 2.5px;
+  }
+
+  .log-in, .sign-up {
+    text-align: center;
+    padding: 0.5rem 10rem;
+    border-radius: 4px;
+    margin: 1rem 2rem;
+    color: #fff;
+    background-color: $text-color;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+#notice {
+  color: green;
+}
+
+#alert {
+  color: red;
 }
