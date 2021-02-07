@@ -18,8 +18,9 @@ class HabitsController < ApplicationController
     @habit = current_user.habits.new(habit_params.select{|key, value| key != 'group_id'})
     if @habit.save
         GroupHabit.create(habit_id: @habit.id, group_id: habit_params[:group_id])
-      redirect_to habit_path({id: @habit.id})
+      redirect_to habit_path({id: @habit.id}), notice: 'Habit successfully created.'
     else
+      flash.now[:alert] = @habit.errors.full_messages.first
       render :new
     end 
   end

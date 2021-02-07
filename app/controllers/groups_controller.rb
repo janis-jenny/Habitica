@@ -13,8 +13,9 @@ class GroupsController < ApplicationController
     @group = current_user.groups.new(group_params)
     if @group.save
       @group.avatar.attach(params[:group][:avatar])
-      redirect_to group_path(@group)
+      redirect_to group_path(@group), notice: 'Group was successfully created.'
     else
+      flash[:alert] = @group.errors.full_messages.first
       render :new
     end
   end

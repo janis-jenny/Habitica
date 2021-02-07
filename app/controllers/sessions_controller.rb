@@ -9,13 +9,14 @@ class SessionsController < ApplicationController
       redirect_to user_path(session[:user_id])
       flash[:notice] = 'Succesfully logged in'
     else
-      flash.now[:alert] = 'Please enter a valid Name'
+      flash.now[:alert] = 'Please enter a valid name'
       redirect_to new_user_path
     end
   end
 
   def destroy
     session[:user_id] = nil
+    flash[:notice] = 'Succesfully logged out'
     redirect_to root_path
   end
 end

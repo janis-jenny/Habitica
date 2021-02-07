@@ -3,7 +3,7 @@
     <h1>MY GROUPS</h1>
     <%= link_to "Back", user_path(current_user)%>
   </div>
-
+  <p><%= notice %></p>
   <ul>
     <% @groups.each do |group| %>
       <% date = group.created_at.to_date %>

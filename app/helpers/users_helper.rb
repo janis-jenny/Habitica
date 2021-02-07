@@ -3,14 +3,8 @@ module UsersHelper
     params.require(:user).permit(:name, :avatar)
   end
 
-=begin   def user_errors
-    return unless @user.errors.any?
-
-    @user.errors.full_messages.each do |msg|
-      if msg.include?('Name')
-        @uclas1 = 'border border-danger'
-      end
-    end
-  end 
-=end
+  def user_icons(user)
+    img = user.groups.first
+    !img.avatar.attached? ? 'icon.png' : img.avatar
+  end
 end

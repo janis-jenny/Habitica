@@ -5,13 +5,13 @@
 <% habits.each do |habit| %>
   <div>            
     <h5><%= habit.name %></h5>
-      <p><%= "#{format_date(habit.created_at.to_date)}"%></p>
-      <p><%= "#{habit.time} minutes" %></p>
+      <p><%= "Created at: #{format_date(habit.created_at.to_date)}"%></p>
+      <p><%= "Minutes: #{habit.time} minutes" %></p>
   </div>
   <% frequency_days(habit.repeat_days).each do |el| %>
-    <%=el%>
+    <p>Days: <%=el%></p>
   <% end %> 
-  <p>Total time: <%="#{habit.time * habit.repeat_days.count} minutes"%></p>
+  <p><%="Total time: #{habit.time * habit.repeat_days.count} minutes"%></p>
 <% end %>
 
 

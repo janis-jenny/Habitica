@@ -1,4 +1,5 @@
 <%= form_with(model: @habit, local: true) do |f| %>
+<p id="alert"> <%= alert %> </p>
 
   <% unless @groups.nil? || @groups.empty? %>
       <div>

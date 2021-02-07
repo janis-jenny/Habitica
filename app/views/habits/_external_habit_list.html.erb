@@ -7,8 +7,8 @@
   <%=image_tag(url_for(group_icons(habit)))%>
   <h5><%= habit.name%></h5>
     <p><%= "Created at #{format_date(habit.created_at.to_date)}"%></p>
-    <p><%= "#{habit.time} minutes" %></p>
+    <p><%= "Minutes: #{habit.time} minutes" %></p>
   <% frequency_days(habit.repeat_days).each do |el| %>
-    <%=el%>
+    <p>Days: <%=el%></p>
   <% end %>
 <% end %>
