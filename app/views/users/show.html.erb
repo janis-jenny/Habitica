@@ -1,15 +1,16 @@
-<div class="container">
+<div class="show">
 
-<div class="header">
-    <%=image_tag(url_for(user_icons(@user)))%>
-    <h2><%= @user.name %></h2>
+  <div>  
+    <div>
+      <%=image_tag(url_for(user_icons(@user)), class: 'user-icon')%>
+    </div>
+    <h2 class="show__title text-white p-3"><%= @user.name %></h2>
+    <ul class="d-flex flex-column align-items-center">
+      <li><%= link_to "Habits", habits_path, class: 'text-white' %></li>
+      <li><%= link_to "External Habits", external_habits_url, class: 'text-white' %></li>
+      <li><%= link_to "Groups", groups_path, class: 'text-white' %></li>
+      <li><%= link_to "Edit Account", edit_user_path, class: 'text-white' %></li>
+      <li><%= link_to "Log Out", logout_path, class: 'text-white' %></li>
+    </ul>
   </div> 
-
-  <ul class="links">
-    <li><%= link_to "Habits", habits_path %></li>
-    <li><%= link_to "External Habits", external_habits_url %></li>
-    <li><%= link_to "Groups", groups_path %></li>
-    <li><%= link_to "Edit Account", edit_user_path %></li>
-    <li><%= link_to "Log Out", logout_path, method: :delete %></li>
-  </ul>
 </div>

@@ -6,5 +6,6 @@ class Habit < ApplicationRecord
   accepts_nested_attributes_for  :groups, allow_destroy: true
  
   validates :name, :time, presence: true
-  validates :time, numericality: { greater_than: 0 }
+  validates :time, numericality: { greater_than:0 }
+
 end

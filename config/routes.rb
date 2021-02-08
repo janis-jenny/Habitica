@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   get '/external_habits', to: 'habits#external_habits'
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
-  delete '/logout', to: 'sessions#destroy'
+  get '/logout', to: 'sessions#destroy'
   root 'sessions#index'
 end

@@ -1,0 +1,8 @@
+<nav class='nav d-flex align-items-center'>
+      <%= link_to user_path(current_user.id), class: 'left-btn' do %>
+       <i class='fas fa-arrow-circle-left'></i>
+      <%end%>
+      <%= link_to 'Logout', logout_path, class: 'logout-btn'%>
+</nav>
+
+<%# ("<i class='fas fa-arrow-circle-left'></i>") %>
