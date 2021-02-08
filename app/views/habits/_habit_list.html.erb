@@ -3,15 +3,17 @@
 </div>
 
 <% habits.each do |habit| %>
-  <div>            
-    <h5><%= habit.name %></h5>
-      <p><%= "Created at: #{format_date(habit.created_at.to_date)}"%></p>
-      <p><%= "Minutes: #{habit.time} minutes" %></p>
-  </div>
-  <% frequency_days(habit.repeat_days).each do |el| %>
-    <p>Days: <%=el%></p>
-  <% end %> 
-  <p><%="Total time: #{habit.time * habit.repeat_days.count} minutes"%></p>
+  <% if habit.user_id == current_user.id %>
+    <div>            
+      <h5><%= habit.name %></h5>
+        <p><%= "Created at: #{format_date(habit.created_at.to_date)}"%></p>
+        <p><%= "Minutes: #{habit.time} minutes" %></p>
+    </div>
+    <% frequency_days(habit.repeat_days).each do |el| %>
+      <p>Days: <%=el%></p>
+    <% end %> 
+    <p><%="Total time: #{habit.time * habit.repeat_days.count} minutes"%></p>
+  <%end%>
 <% end %>
 
 

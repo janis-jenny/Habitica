@@ -29,6 +29,11 @@ body {
     border: none;
     z-index: 1;
   }
+
+  .welcome {
+    position: relative;
+    left: 8rem;
+  }
 }
 
 .nav-title {
@@ -89,9 +94,9 @@ ul
   position: relative;
   padding: 0.6rem 0.7rem;
   top: 0.7rem;
-  left: 0.1rem;
-  background-color: $text-color;
+  left: 9.1rem;
   color: #fff;
+  background-color: $text-color;
   border: none;
   cursor: pointer;
 }
@@ -121,6 +126,7 @@ a {
   border: $second-color solid 3px;
   border-radius: 50%;
   margin: 0 auto;
+  margin-top: 40px;
   width: 150px;
   height: 150px;
 }
@@ -149,7 +155,7 @@ a {
   }
 
   a:hover {
-    background-color: $main-color;
+    background: linear-gradient(45deg, #575B61 0%, $text-color 50%, #5F666E 100%);
   }
 }
 

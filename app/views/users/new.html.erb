@@ -1,16 +1,19 @@
-
+<nav class='nav d-flex align-items-center'>
+      <%= link_to root_path, class: 'left-btn' do %>
+       <i class='fas fa-arrow-circle-left text-white px-2'></i>
+      <%end%>
+</nav>
 <br>
 <br>
-
-<div class="container">
-  <h1>Sign up</h1>
-  <div class="w-25 border border-secondary mt-3 p-3 rounded">
-    <%= form_for @user, url: {action: "create"} do |f| %>
-      Name: <%= f.text_field :name, placeholder: "Only first name", class:"form-control my-2"%><br/>
-      Profile Picture: <%= f.file_field :avatar, class:"form-control my-2" %>
-  </div>
-    <%= f.submit "Create", class: 'btn btn-success my-2' %>
-    <% end %>
- </div>
+<p id="alert"><%= alert %></p>
+<br>
+<div>
+  <h2 class="nav-title">Sign up
+  </h2>
+  <%= form_for @user, url: {action: "create"} do |f| %>
+    Name: <%= f.text_field :name, placeholder: "Only first name", class: 'name-input rounded'%><br/>
+    Avatar: <%= f.file_field :avatar, class: 'name-input rounded' %>
+    <%= f.submit "Create", class: 'btn-submit rounded mt-2 mx-1'%>
+  <% end %>
 </div>
 
