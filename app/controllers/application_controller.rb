@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   helper_method :current_user
+  helper_method :user_login
   helper_method :format_date
   helper_method :authenticate_user
 
@@ -7,6 +8,10 @@ class ApplicationController < ActionController::Base
     User.find_by(id: session[:user_id])
   end
 
+  def user_login
+    !current_user.nil?
+  end
+  
   def format_date(date)
     return unless date.is_a?(Date)
 

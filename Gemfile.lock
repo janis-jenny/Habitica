@@ -77,6 +77,8 @@ GEM
     diff-lcs (1.4.4)
     erubi (1.10.0)
     ffi (1.14.2)
+    font-awesome-sass (5.15.1)
+      sassc (>= 1.11)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     hirb (0.7.3)
@@ -222,6 +224,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
+  font-awesome-sass
   hirb
   jbuilder (~> 2.7)
   listen (~> 3.2)

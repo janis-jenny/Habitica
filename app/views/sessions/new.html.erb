@@ -1,15 +1,14 @@
+<br>
+<br>
+<br>
+<br>
 <p id="alert"><%= alert %></p>
-<br>
-<br>
-
-<div class="container">
-  <h1 class='nav-title'>Log in</h1>
-  <div class="w-25 border border-secondary mt-3 p-3 rounded">
-    <%= form_tag login_path do |f| %>
-      <%= label_tag :name, nil, class: 'label' %>
-      <%= text_field_tag :name, nil, class: 'input form-control my-2' %>
-      <%= submit_tag "Sign in", class: 'btn btn-success my-2'%>
-      <%= submit_tag "Sign up", class: 'btn btn-success my-2'%>
-    <%end%>
-  </div>
+<div>
+  <h2 class="nav-title">Log in
+  </h2>
+  <%= form_tag login_path do |f| %>
+    <%= label_tag :name, nil, class: 'mx-1' %>
+    <%= text_field_tag :name, nil, class: 'name-input rounded' %>
+    <%= submit_tag "Sign in", class: 'btn-submit rounded mt-2 mx-1' %>
+  <%end%>
 </div>
