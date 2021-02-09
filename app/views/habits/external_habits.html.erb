@@ -1,9 +1,7 @@
 <div class="habits">
   <%= render 'common_share/navbar' %>
-  <div>
-    <h1>External Habits</h1>
-  </div>
-
+  <br>
+  <h1 class="nav-title pt-5">External Habits</h1>
   <%= render 'external_habit_list', {habits: @habits, total_habits: @total_habits}  %> 
 
   <%= link_to raw("<span>New Habit</span>"), new_habit_path, method: 'get', class: 'new-btn' %>

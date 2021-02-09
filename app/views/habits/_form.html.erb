@@ -4,22 +4,18 @@
   <% unless @groups.nil? || @groups.empty? %>
       <div>
         <%= f.label :group_id, "Group:" %>
-      </div>
-      <div>
-        <%= f.collection_select :group_id, Group.order(:name), :id, :name %>
+        <%= f.collection_select :group_id, Group.order(:name), :id, :name, class: 'name-input rounded' %>
       </div>
   <% end %>
-
-  </br>
-
+  <br>
   <div>
     <%= f.label :name, "Name:" %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class: 'name-input rounded'%>
   </div>
   <div>
     <%= f.label :time, "Time:" %>
-    <%= f.number_field :time, placeholder: 'Time(minutes)'%>
+    <%= f.number_field :time, placeholder: 'Time(minutes)', class: 'name-input rounded'%>
   </div> 
-    <%= f.submit 'Select frequency' %>
+    <%= f.submit 'Select frequency', class: 'btn-submit rounded mt-2 mx-0' %>
   </div>
 <% end %>

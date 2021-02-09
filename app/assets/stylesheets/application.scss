@@ -111,6 +111,17 @@ form {
     cursor: pointer;
   }
 
+  .btn-delete {
+    position: relative;
+    padding: 0.6rem 0.7rem;
+    top: 0.7rem;
+    left: 0.4rem;
+    color: #fff;
+    background-color: rgb(252, 7, 88);
+    border: none;
+    cursor: pointer;
+  }
+
   .name-input {
     margin-top: 1.5rem;
     width: 75%;
