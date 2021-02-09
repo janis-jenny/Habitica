@@ -1,9 +1,8 @@
 <div class="habits">  
   <%= render 'common_share/navbar' %>
-  <div class="pt-5">
-  <h4 class="nav-title">My Total Habits:</h4><p><%="#{total_hours} hours"%></p>
+  <br>
+  <h4 class="nav-title pt-5">My Total Habits:</h4><p><%="#{total_hours} hours"%></p>
   <% total_hours %>
-  </div>
 
   <%= render 'external_habit_list', {habits: @habits}  %> 
 

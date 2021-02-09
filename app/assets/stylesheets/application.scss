@@ -235,5 +235,23 @@ a {
   }
 }
 
+/* GROUPS VIEW */
 
+  .group-icon {
+    width: 26%;
+    height: 80px;
+    margin-bottom: 7px;
+    border: $second-color solid 2px;
+    img {
+      object-fit: fill;
+      height: 75px;
+      width: 99px;
+    }
+  }
+
+  .info-group {
+    color:$text-color;
+    margin-top: 10px;
+    margin-left: 12px;
+  }
 
