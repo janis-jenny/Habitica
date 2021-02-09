@@ -1,12 +1,11 @@
-<div>  
+<div class="habits">  
   <%= render 'common_share/navbar' %>
-  <div>
-    <h1>MY HABITS</h1>
-    <%= link_to "Back", user_path(current_user) %>
-    <%= link_to "Log Out", logout_path, method: :delete %></li>
+  <div class="pt-5">
+  <h4 class="nav-title">My Total Habits:</h4><p><%="#{total_hours} hours"%></p>
+  <% total_hours %>
   </div>
 
   <%= render 'external_habit_list', {habits: @habits}  %> 
 
-  <%= button_to "New habit", new_habit_path, method: 'get' %>
+  <%= link_to raw("<span>New Habit</span>"), new_habit_path, method: 'get', class: 'new-btn' %>
 </div>

@@ -17,22 +17,31 @@ body {
   height: 3.6rem;
   width: 28rem;
   margin: 0 auto;
-  background: linear-gradient(45deg, #489BE8 0%, $main-color 56%, #2E64A2 100%);
+  background: linear-gradient(45deg, #59b5eb 0%, $main-color 56%, #2E64A2 100%);
 
   .logout-btn {
     position: absolute;
     padding: 0.6rem 0.8rem;
     top: 0.6rem;
     right: 0.7rem;
+    font-size: 1rem;
     background-color: transparent;
-    color: #fff;
     border: none;
+    z-index: 1;
+  }
+ 
+  .left-btn {
+    position: absolute;
+    padding: 0.6rem 0.8rem;
+    top: 0.7rem;
+    left: 0.6rem;
+    font-size: 1rem;
     z-index: 1;
   }
 
   .welcome {
     position: relative;
-    left: 8rem;
+    left: 10.6rem;
   }
 }
 
@@ -69,7 +78,7 @@ ul
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  background: linear-gradient(45deg, #489BE8 0%, $main-color 56%, #2E64A2 100%);
+  background: linear-gradient(45deg, #57b3e7 0%, $main-color 54%, #2E64A2 100%);
 
   .title {
     position: absolute;
@@ -90,22 +99,24 @@ ul
   }
 }
 
-.btn-submit {
-  position: relative;
-  padding: 0.6rem 0.7rem;
-  top: 0.7rem;
-  left: 9.1rem;
-  color: #fff;
-  background-color: $text-color;
-  border: none;
-  cursor: pointer;
-}
+form {
+  .btn-submit {
+    position: relative;
+    padding: 0.6rem 0.7rem;
+    top: 0.7rem;
+    left: 0.4rem;
+    color: #fff;
+    background-color: $text-color;
+    border: none;
+    cursor: pointer;
+  }
 
-.name-input {
-  margin-top: 1.5rem;
-  width: 75%;
-  border: 1px lightgray solid;
-  padding: 0.6rem 1rem;
+  .name-input {
+    margin-top: 1.5rem;
+    width: 75%;
+    border: 1px lightgray solid;
+    padding: 0.6rem 1rem;
+  }
 }
 
 a {
@@ -132,7 +143,7 @@ a {
 }
 
 .show {
-  background: linear-gradient(45deg, #489BE8 0%, $main-color 56%, #2E64A2 100%);
+  background: linear-gradient(45deg, #59b5eb 0%, $main-color 54%, #2E64A2 100%);
   height: 100%;
   // &__title {}
   ul {
@@ -159,10 +170,59 @@ a {
   }
 }
 
-.habit_icon {
-  img {
-    object-fit: fill;
-    height: 100%;
-    width: 100%;
+/* HABITS VIEW */
+
+.habits {
+  height: 100%;
+  margin: 0 auto;
+    .new-btn{
+    width: 28rem;
+    padding: 1.5rem 0;
+    position: absolute;
+    bottom: 0;
+    right: 0.1rem;
+    left: 0;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 300;
+    background-color: $second-color;
+    border: none;
+    cursor: pointer;
+
+    span {
+      border: 1px #fff solid;
+      padding: 0.5rem 32%;
+      border-radius: 5px;
     }
+  }
 }
+
+.box {
+  display: flex;
+  margin-left: 15px;
+  .habit_icon {
+    width: 24%;
+    height: 80px;
+    border: $second-color solid 2px;
+    img {
+      object-fit: fill;
+      height: 75px;
+      width: 99px;
+    }
+  }
+
+  .info {
+    margin: 0 auto;
+    .item-name {
+      font-size: 1rem;
+      margin: 0;
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+
