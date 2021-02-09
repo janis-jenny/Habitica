@@ -5,13 +5,12 @@
 <div>
   <label class="my-2">Days:</label><br>
   <%= form_with(model: @habit, local: true) do |f| %>
-  <p><%= link_to 'Monday', repeat_days_path(day: 'Tuesday', habit_id: @habit.id), method: :post, class: 'btn-submit rounded' %></p><br>
-  <p><%= link_to 'Tuesday', repeat_days_path(day: 'Tuesday', habit_id: @habit.id), method: :post, class: 'btn-submit rounded' %></p><br>
-  <p><%= link_to 'Wednesday', repeat_days_path(day: 'Wednesday', habit_id: @habit.id), method: :post, class: 'btn-submit rounded' %></p><br>
-  <p><%= link_to 'Thursday', repeat_days_path(day: 'Thursday', habit_id: @habit.id), method: :post, class: 'btn-submit rounded' %></p><br>
-  <p><%= link_to 'Friday', repeat_days_path(day: 'Friday', habit_id: @habit.id), method: :post, class: 'btn-submit rounded' %></p><br>
-  <p><%= link_to 'Saturday', repeat_days_path(day: 'Saturday', habit_id: @habit.id), method: :post, class: 'btn-submit rounded' %></p><br>
-  <p><%= link_to 'Sunday', repeat_days_path(day: 'Sunday', habit_id: @habit.id), method: :post, class: 'btn-submit rounded' %></p><br>
+  <p><%= select_days(@habit, 'monday') %></p><br>
+  <p><%= select_days(@habit, 'tuesday') %></p><br>
+  <p><%= select_days(@habit, 'wednesday') %></p><br>
+  <p><%= select_days(@habit, 'thursday') %></p><br>
+  <p><%= select_days(@habit, 'friday') %></p><br>
+  <p><%= select_days(@habit, 'saturday') %></p><br>
   <p><%= link_to 'Submit', habits_path, method: :get, class: 'btn-submit rounded'%></p>
   <% end %>
   <br>

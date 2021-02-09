@@ -15,4 +15,14 @@ module HabitsHelper
     img = habit.groups.first
     !img.avatar.attached? ? 'icon.png' : img.avatar
   end
+
+  def select_days(habit, day)
+    selected_day = RepeatDay.find_by(user_id: current_user.id, day: "#{day}")
+
+    if selected_day
+      link_to "#{day}", repeat_day_path(day: "#{day}", habit_id: habit.id), class: 'btn-delete  my-5 rounded', method: :delete
+    else
+      link_to "#{day}", repeat_days_path(day: "#{day}", habit_id: habit.id), class: 'btn-submit my-5 rounded', method: :post
+    end
+  end
 end
