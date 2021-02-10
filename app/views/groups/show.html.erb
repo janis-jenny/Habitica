@@ -1,16 +1,19 @@
-<div>
-  <%= link_to "Back", user_path(current_user)%>
-  <img 
-  class= "image" 
-  src= <%= group_icon(@group) %>
-  >
-  <br><br>
-  <h1>Group: <%= @group.name.upcase %></h1>
+<div class="habits">
+  <%= render 'common_share/navbar' %>
   <br>
-  <h3>Created on: <%= "#{format_date(@group.created_at.to_date)}"%></h3>
-  <h3>Created by: <%= @group.user.name%></h3>
+  <br>
+  <br>
+  <div class="group-icon">
+    <img src= <%= group_icon(@group) %>>
+  </div>
+  <br><br>
+  <div class="info-group"> 
+    <h2>Group: <%= @group.name%></h2>
+    <h4>Created at: <%= "#{format_date(@group.created_at.to_date)}"%></h4>
+    <h4>Created by: <%= @group.user.name%></h4>
+  </div>
   <br>
   <%= render 'habits/habit_list', {habits: @habits} %>
-  <%= link_to 'Add Habit',new_habit_path(group: @group.id), class: 'action-btn' %>
+  <p><%=link_to raw("<span>Add Habit</span>"), new_habit_path(group: @group.id), method: 'get', class: 'new-btn' %></p>
 </div>
 

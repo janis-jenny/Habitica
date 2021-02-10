@@ -3,7 +3,6 @@ class RepeatDaysController < ApplicationController
     @repeat_days = RepeatDay.new(day: params[:day], user_id: current_user.id, habit_id: params[:habit_id])
     @repeat_days.save
     redirect_to habit_path(params[:habit_id])
-
   end
   
   def destroy

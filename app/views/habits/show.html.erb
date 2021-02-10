@@ -5,12 +5,12 @@
 <div>
   <label class="my-2">Days:</label><br>
   <%= form_with(model: @habit, local: true) do |f| %>
-  <p><%= select_days(@habit, 'monday') %></p><br>
-  <p><%= select_days(@habit, 'tuesday') %></p><br>
-  <p><%= select_days(@habit, 'wednesday') %></p><br>
-  <p><%= select_days(@habit, 'thursday') %></p><br>
-  <p><%= select_days(@habit, 'friday') %></p><br>
-  <p><%= select_days(@habit, 'saturday') %></p><br>
+  <p><%= select_days(@habit, 'Monday') %></p><br>
+  <p><%= select_days(@habit, 'Tuesday') %></p><br>
+  <p><%= select_days(@habit, 'Wednesday') %></p><br>
+  <p><%= select_days(@habit, 'Thursday') %></p><br>
+  <p><%= select_days(@habit, 'Friday') %></p><br>
+  <p><%= select_days(@habit, 'Saturday') %></p><br>
   <p><%= link_to 'Submit', habits_path, method: :get, class: 'btn-submit rounded'%></p>
   <% end %>
   <br>

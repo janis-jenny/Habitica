@@ -2,21 +2,22 @@
   <%= render 'common_share/navbar' %>
   <br>
   <h4 class="nav-title pt-5">My Groups</h4>
-  <p><%= notice %></p>
   <ul>
     <% @groups.each do |group| %>
-      <% date = group.created_at.to_date %>
-      <%=link_to group_path(group.id) do %>
-      <div class="d-flex">
-        <div class="group-icon">
-          <%=image_tag(group_icon(group))%>
+      <% if group.user_id == current_user.id %>
+        <% date = group.created_at.to_date %>
+        <%=link_to group_path(group.id) do %>
+        <div class="d-flex">
+          <div class="group-icons">
+            <%=image_tag(group_icon(group))%>
+          </div>
+          <div class="info-group">
+            <p class="mb-0"><%= group.name %></p>
+            <p class="mb-0">Created at: <%=format_date(date)%></p> 
+            <p class="mb-0">Created by: <%=group.user.name%></p>
+          </div>
         </div>
-        <div class="info-group">
-          <p class="mb-0"><%= group.name %></p>
-          <p class="mb-0">Created on <%=format_date(date)%></p> 
-          <p class="mb-0">Created by <%=group.user.name%></p>
-        </div>
-      </div>
+        <%end%>
       <%end%>
     <% end %>
   </ul>

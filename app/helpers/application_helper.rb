@@ -9,6 +9,4 @@ module ApplicationHelper
     m = total % 60;
     return "#{h},#{m}"
   end
-
-  
 end
