@@ -8,11 +8,10 @@
   </div>
   <br><br>
   <div class="info-group"> 
-    <h2>Group: <%= @group.name%></h2>
-    <h4>Created at: <%= "#{format_date(@group.created_at.to_date)}"%></h4>
-    <h4>Created by: <%= @group.user.name%></h4>
+    <h5>Group: <%= @group.name%></h5>
+    <p class="m-0 pb-1">Created at: <%= "#{format_date(@group.created_at.to_date)}"%></p>
+    <p class="m-0 pt-1">Created by: <%= @group.user.name%></p>
   </div>
-  <br>
   <%= render 'habits/habit_list', {habits: @habits} %>
   <p><%=link_to raw("<span>Add Habit</span>"), new_habit_path(group: @group.id), method: 'get', class: 'new-btn' %></p>
 </div>

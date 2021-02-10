@@ -5,11 +5,11 @@ class GroupsController < ApplicationController
   def index
     @groups = Group.all.includes(avatar_attachment: [:blob])
   end
-  
+
   def new
     @group = current_user.groups.new
   end
-  
+
   def create
     @group = current_user.groups.new(group_params)
     if @group.save
@@ -20,7 +20,7 @@ class GroupsController < ApplicationController
       render :new
     end
   end
-  
+
   def show
     @group = Group.find(params[:id])
     @habits = @group.habits.includes(user: [avatar_attachment: :blob])

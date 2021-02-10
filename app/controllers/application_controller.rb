@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   def user_login
     !current_user.nil?
   end
-  
+
   def format_date(date)
     return unless date.is_a?(Date)
 

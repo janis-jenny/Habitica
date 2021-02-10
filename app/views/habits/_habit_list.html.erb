@@ -3,7 +3,7 @@
   <% habits.each do |habit| %>
     <% if habit.user_id == current_user.id %>
       <div class="info-group">            
-        <h5><%= habit.name %>
+        <h5 class="mb-0"><%= habit.name %>
         </h5>
         <p><%= "Created at: #{format_date(habit.created_at.to_date)}"%></p>
         <p><%= "Minutes: #{habit.time} minutes" %></p>

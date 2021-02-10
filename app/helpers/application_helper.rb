@@ -3,10 +3,10 @@ module ApplicationHelper
     habits = Habit.where(user_id: current_user.id)
     total = 0
     habits.each do |habit|
-     total += habit.time * habit.repeat_days.count
+      total += habit.time * habit.repeat_days.count
     end
     h = total / 60
-    m = total % 60;
-    return "#{h},#{m}"
+    m = total % 60
+    "#{h},#{m}"
   end
 end
