@@ -1,5 +1,6 @@
 class GroupsController < ApplicationController
   include GroupsHelper
+  before_action :authenticate_user
 
   def index
     @groups = Group.all.includes(avatar_attachment: [:blob])

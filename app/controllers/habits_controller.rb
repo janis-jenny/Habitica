@@ -1,4 +1,5 @@
 class HabitsController < ApplicationController
+  before_action :authenticate_user
   include HabitsHelper
   include GroupsHelper
 

@@ -1,4 +1,5 @@
 class RepeatDaysController < ApplicationController
+  before_action :authenticate_user
   def create
     @repeat_days = RepeatDay.new(day: params[:day], user_id: current_user.id, habit_id: params[:habit_id])
     @repeat_days.save
