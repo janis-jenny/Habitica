@@ -4,7 +4,7 @@
 <h1 class="nav-title pt-5">Select Frequency</h1>
 <div>
   <label class="my-2">Days:</label><br>
-  <%= form_with(model: @habit, local: true) do |f| %>
+  <div class="form">
   <p><%= select_days(@habit, 'Monday') %></p><br>
   <p><%= select_days(@habit, 'Tuesday') %></p><br>
   <p><%= select_days(@habit, 'Wednesday') %></p><br>
@@ -15,7 +15,7 @@
   <br>
   <br>
   <p><%= link_to 'Submit', habits_path, method: :get, class: 'btn-submit rounded'%></p>
-  <% end %>
+  </div> 
   <br>
 </div>
   
