@@ -4,7 +4,6 @@ class HabitsController < ApplicationController
 
   def index
     @habits = Habit.all.includes(:repeat_days) 
-   
   end
 
   def new
@@ -28,10 +27,11 @@ class HabitsController < ApplicationController
   def show
     @habit = Habit.find(params[:id])
   end
-  
+
   def external_habits
-    @habits = Habit.all.select do |t|
-     t.user.id == session[:user_id]
-    end 
+    a = Group.where(name: '')
+    group = a[0]
+    @habits=group.habits
   end
 end
+    

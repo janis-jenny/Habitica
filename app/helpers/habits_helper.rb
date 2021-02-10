@@ -25,4 +25,6 @@ module HabitsHelper
       link_to "#{day}", repeat_days_path(day: "#{day}", habit_id: habit.id), class: 'btn-submit my-5 rounded', method: :post
     end
   end
+
+  
 end
