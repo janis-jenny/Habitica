@@ -56,4 +56,6 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'hirb'
 
-gem 'font-awesome-sass'
+group :development, :test do
+  gem 'sqlite3'
+end
