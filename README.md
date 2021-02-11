@@ -38,7 +38,7 @@ You can track the days and the time per habit and check the total of time that y
 
 ## 🔴 Live Demo:
 
-[Live Demo Link]()
+[www.habitica.com](https://polar-bastion-03466.herokuapp.com/)
 
 ## 🔧 Built with
 
@@ -105,7 +105,7 @@ To get a local copy up and running follow these simple steps:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/kcotrinam/movieLife/issues).
+Feel free to check the [issues page](https://github.com/janis-jenny/Habitica/issues).
 
 
 ## ⭐ Show your support
