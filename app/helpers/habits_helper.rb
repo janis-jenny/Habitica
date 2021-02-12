@@ -1,10 +1,7 @@
 # rubocop:disable Lint/ShadowingOuterLocalVariable
 # rubocop:disable Layout/LineLength
 module HabitsHelper
-  def habit_params
-    params.require(:habit).permit(:name, :amount, :time, :group_id)
-  end
-
+  
   def frequency_days(param)
     arr = []
     param.each do |el|

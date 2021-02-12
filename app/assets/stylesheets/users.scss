@@ -1,3 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
 $main-color: #3778c2;
 $second-color: #5fb523;
 $text-color: #434b54;
+
+/* USERS VIEW */
+
+.user-icon {
+  width: 45%;
+  border: $second-color solid 3px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 40px;
+  height: 150px;
+}
+
+.show {
+  background: linear-gradient(45deg, #59b5eb 0%, $main-color 54%, #2e64a2 100%);
+  height: 100%;
+  // &__title {}
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    font-size: 1.7rem;
+    font-weight: 300;
+    padding: 1.2rem 0;
+    width: 100%;
+  }
+
+  a {
+    color: #fff;
+    padding: 0.6rem 0.8rem;
+    border-radius: 4px;
+  }
+
+  a:hover {
+    background: linear-gradient(45deg, #575b61 0%, $text-color 50%, #5f666e 100%);
+  }
+}

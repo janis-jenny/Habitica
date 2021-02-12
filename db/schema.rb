@@ -41,6 +41,8 @@ ActiveRecord::Schema.define(version: 2021_02_03_184408) do
     t.integer "habit_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["group_id"], name: "index_group_habits_on_group_id"
+    t.index ["habit_id"], name: "index_group_habits_on_habit_id"
   end
 
   create_table "groups", force: :cascade do |t|
@@ -49,6 +51,7 @@ ActiveRecord::Schema.define(version: 2021_02_03_184408) do
     t.string "avatar"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_groups_on_user_id"
   end
 
   create_table "habits", force: :cascade do |t|
@@ -59,6 +62,7 @@ ActiveRecord::Schema.define(version: 2021_02_03_184408) do
     t.integer "time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_habits_on_user_id"
   end
 
   create_table "repeat_days", force: :cascade do |t|
@@ -67,6 +71,8 @@ ActiveRecord::Schema.define(version: 2021_02_03_184408) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"
     t.integer "habit_id"
+    t.index ["user_id"], name: "index_repeat_days_on_user_id"
+    t.index ["habit_id"], name: "index_repeat_days_on_habit_id"
   end
 
   create_table "users", force: :cascade do |t|

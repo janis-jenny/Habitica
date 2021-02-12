@@ -25,4 +25,10 @@ class GroupsController < ApplicationController
     @group = Group.find(params[:id])
     @habits = @group.habits.includes(user: [avatar_attachment: :blob])
   end
+
+  private
+
+  def group_params
+    params.require(:group).permit(:name, :avatar)
+  end
 end

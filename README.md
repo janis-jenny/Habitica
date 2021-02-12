@@ -74,7 +74,7 @@ To get a local copy up and running follow these simple steps:
 ## 📝 Setup
 
 1. Open the terminal.
-2. On the terminal navigate to the project directory using `cd movieLife/`.
+2. On the terminal navigate to the project directory using `cd Habitica/`.
 3. Install dependencies using: `bundle install`.
 3. If it required: `bundle update`.
 4. Migrate the database: `rails db:create`.
@@ -89,7 +89,7 @@ To get a local copy up and running follow these simple steps:
 1. Open the terminal and go to the directory.
 2. Start the application : `rails server`.
 3. Open the browser and go to : `http://localhost:3000/`
-4. Optional: use the [live version link]()
+4. Optional: use the [live version link](https://polar-bastion-03466.herokuapp.com/)
 4. Enjoy the different functions the App has.
 
 ## 👥 Author
