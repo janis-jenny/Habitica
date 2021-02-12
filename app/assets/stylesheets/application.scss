@@ -8,7 +8,6 @@ body {
   background-color: #fff;
   color: #333;
   margin: 0;
-  
 }
 
 .nav {
@@ -17,8 +16,8 @@ body {
   height: 3.6rem;
   width: 28rem;
   margin: 0 auto;
-  background: linear-gradient(45deg, #59b5eb 0%, $main-color 56%, #2E64A2 100%);
-
+  background: linear-gradient(45deg, #59b5eb 0%, $main-color 56%, #2e64a2 100%);
+  
   .logout-btn {
     position: absolute;
     padding: 0.6rem 0.8rem;
@@ -29,7 +28,7 @@ body {
     border: none;
     z-index: 1;
   }
- 
+
   .left-btn {
     position: absolute;
     padding: 0.6rem 0.8rem;
@@ -66,7 +65,7 @@ main {
 body,
 p,
 ul
-{
+ {
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -78,7 +77,7 @@ ul
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  background: linear-gradient(45deg, #57b3e7 0%, $main-color 54%, #2E64A2 100%);
+  background: linear-gradient(45deg, #57b3e7 0%, $main-color 54%, #2e64a2 100%);
 
   .title {
     position: absolute;
@@ -89,7 +88,8 @@ ul
     letter-spacing: 2.5px;
   }
 
-  .log-in, .sign-up {
+  .log-in,
+  .sign-up {
     text-align: center;
     padding: 0.5rem 5rem;
     border-radius: 4px;
@@ -99,7 +99,8 @@ ul
   }
 }
 
-form, .form {
+form,
+.form {
   .btn-submit {
     position: relative;
     padding: 0.6rem 0.7rem;
@@ -119,9 +120,7 @@ form, .form {
     color: #fff;
     background-color: rgb(252, 7, 88);
     border: none;
-    cursor: pointer;
-
-    
+    cursor: pointer;    
   }
   
   .btn-save {
@@ -162,12 +161,11 @@ a {
   border-radius: 50%;
   margin: 0 auto;
   margin-top: 40px;
-  width: 150px;
   height: 150px;
 }
 
 .show {
-  background: linear-gradient(45deg, #59b5eb 0%, $main-color 54%, #2E64A2 100%);
+  background: linear-gradient(45deg, #59b5eb 0%, $main-color 54%, #2e64a2 100%);
   height: 100%;
   // &__title {}
   ul {
@@ -190,7 +188,43 @@ a {
   }
 
   a:hover {
-    background: linear-gradient(45deg, #575B61 0%, $text-color 50%, #5F666E 100%);
+    background: linear-gradient(45deg, #575b61 0%, $text-color 50%, #5f666e 100%);
+  }
+}
+
+/* GROUPS VIEW */
+
+.group-icons {
+  width: 26%;
+  height: 80px;
+  margin-bottom: 7px;
+  border: $second-color solid 2px;
+
+  img {
+    object-fit: fill;
+    height: 75px;
+    width: 99px;
+  }
+}
+
+.info-group {
+  color: $text-color;
+  margin-top: 10px;
+  margin-left: 12px;
+}
+
+.group-icon {
+  margin-top: 20px;
+  position: relative;
+  left: 9.7rem;
+  width: 28%;
+  height: 108px;
+  border: $second-color solid 2px;
+
+  img {
+    object-fit: fill;
+    height: 104px;
+    width: 115px;
   }
 }
 
@@ -199,36 +233,39 @@ a {
 .habits {
   height: 100%;
   margin: 0 auto;
-    .new-btn{
-    width: 28rem;
-    padding: 1.5rem 0;
-    position: absolute;
-    bottom: 0;
-    right: 0.1rem;
-    left: 0;
-    margin: 0 auto;
-    color: #fff;
-    font-size: 1.1rem;
-    font-weight: 300;
-    background-color: $second-color;
-    border: none;
-    cursor: pointer;
 
-    span {
-      border: 1px #fff solid;
-      padding: 0.5rem 32%;
-      border-radius: 5px;
-    }
+  .new-btn {
+  width: 28rem;
+  padding: 1.5rem 0;
+  position: absolute;
+  bottom: 0;
+  right: 0.1rem;
+  left: 0;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 300;
+  background-color: $second-color;
+  border: none;
+  cursor: pointer;
+
+  span {
+    border: 1px #fff solid;
+    padding: 0.5rem 32%;
+    border-radius: 5px;
+  }
   }
 }
 
 .box {
   display: flex;
   margin-left: 15px;
+
   .habit_icon {
     width: 24%;
     height: 80px;
     border: $second-color solid 2px;
+
     img {
       object-fit: fill;
       height: 75px;
@@ -238,47 +275,14 @@ a {
 
   .info {
     margin: 0 auto;
+
     .item-name {
       font-size: 1rem;
       margin: 0;
     }
+
     p {
       margin-bottom: 0;
     }
   }
 }
-
-/* GROUPS VIEW */
-
-  .group-icons {
-    width: 26%;
-    height: 80px;
-    margin-bottom: 7px;
-    border: $second-color solid 2px;
-    img {
-      object-fit: fill;
-      height: 75px;
-      width: 99px;
-    }
-  }
-
-  .info-group {
-    color:$text-color;
-    margin-top: 10px;
-    margin-left: 12px;
-  }
-
-  .group-icon {
-    margin-top: 20px;
-    position: relative;
-    left: 9.7rem;
-    width: 28%;
-    height: 108px;
-    border: $second-color solid 2px;
-    img {
-      object-fit: fill;
-      height: 104px;
-      width: 115px;
-    }
-  }
-
