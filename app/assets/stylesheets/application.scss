@@ -17,7 +17,7 @@ body {
   width: 28rem;
   margin: 0 auto;
   background: linear-gradient(45deg, #59b5eb 0%, $main-color 56%, #2e64a2 100%);
-  
+
   .logout-btn {
     position: absolute;
     padding: 0.6rem 0.8rem;
@@ -65,7 +65,7 @@ main {
 body,
 p,
 ul
- {
+  {
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -120,9 +120,9 @@ form,
     color: #fff;
     background-color: rgb(252, 7, 88);
     border: none;
-    cursor: pointer;    
+    cursor: pointer;
   }
-  
+
   .btn-save {
     position: relative;
     padding: 0.6rem 0.7rem;
@@ -235,25 +235,25 @@ a {
   margin: 0 auto;
 
   .new-btn {
-  width: 28rem;
-  padding: 1.5rem 0;
-  position: absolute;
-  bottom: 0;
-  right: 0.1rem;
-  left: 0;
-  margin: 0 auto;
-  color: #fff;
-  font-size: 1.1rem;
-  font-weight: 300;
-  background-color: $second-color;
-  border: none;
-  cursor: pointer;
+    width: 28rem;
+    padding: 1.5rem 0;
+    position: absolute;
+    bottom: 0;
+    right: 0.1rem;
+    left: 0;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 300;
+    background-color: $second-color;
+    border: none;
+    cursor: pointer;
 
-  span {
-    border: 1px #fff solid;
-    padding: 0.5rem 32%;
-    border-radius: 5px;
-  }
+    span {
+      border: 1px #fff solid;
+      padding: 0.5rem 32%;
+      border-radius: 5px;
+    }
   }
 }
 
