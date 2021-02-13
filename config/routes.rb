@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :new, :create, :show, :update, :edit]
   resources :habits, only: [:index, :new, :create, :show]
   resources :groups, only: [:index, :new, :create, :show]
-  resources :repeat_days, only: [:create, :destory]
+  resources :repeat_days, only: [:create, :destroy]
 
   get '/external_habits', to: 'habits#external_habits'
   get '/login', to: 'sessions#new'

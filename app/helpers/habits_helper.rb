@@ -19,7 +19,7 @@ module HabitsHelper
     selected_day = RepeatDay.find_by(user_id: current_user.id, day: day.to_s, habit_id: habit.id)
 
     if selected_day
-      link_to day.to_s, repeat_days_path(day: day.to_s, habit_id: habit.id), class: 'btn-delete my-5 rounded', method: :delete
+      link_to day.to_s, repeat_day_path(day: day.to_s, habit_id: habit.id), class: 'btn-delete my-5 rounded', method: :delete
     else
       link_to day.to_s, repeat_days_path(day: day.to_s, habit_id: habit.id), class: 'btn-save my-5 rounded', method: :post
     end
