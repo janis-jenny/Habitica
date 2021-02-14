@@ -4,7 +4,6 @@
   <h4 class="nav-title pt-5">My Groups</h4>
   <ul>
     <% @groups.each do |group| %>
-      <% if group.user_id == current_user.id %>
         <% date = group.created_at.to_date %>
         <%=link_to group_path(group.id) do %>
         <div class="d-flex">
@@ -18,7 +17,6 @@
           </div>
         </div>
         <%end%>
-      <%end%>
     <% end %>
   </ul>
 
