@@ -5,13 +5,20 @@
 </nav>
 <br>
 <br>
-<p id="alert"><%= alert %></p>
+<br>
+<%user_error%>
+
+<% @user.errors.full_messages.each do |msg| %>
+  <div class="alert alert-info">
+    <%= msg %>
+  </div>
+<% end %>
 <br>
 <div>
   <h2 class="nav-title">Sign up
   </h2>
   <%= form_for @user, url: {action: "create"} do |f| %>
-    Name: <%= f.text_field :name, placeholder: "Only first name", class: 'name-input rounded'%><br/>
+    Name: <%= f.text_field :name, placeholder: "Only first name", class: 'name-input rounded #{@uclass}'%><br/>
     Avatar: <%= f.file_field :avatar, class: 'name-input rounded' %>
     <%= f.submit "Create", class: 'btn-submit rounded mt-2 mx-1'%>
   <% end %>
