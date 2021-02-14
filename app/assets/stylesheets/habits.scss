@@ -32,9 +32,14 @@ $second-color: #5fb523;
   }
 }
 
+.container {
+  overflow-y: scroll;
+}
+  
 .box {
   display: flex;
   margin-left: 15px;
+  
 
   .habit_icon {
     width: 24%;

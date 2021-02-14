@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<div>
+<div class="container">
     <% habits.each do |habit| %>
       <% if habit.user_id == current_user.id %>
         <div class="box mb-2">
