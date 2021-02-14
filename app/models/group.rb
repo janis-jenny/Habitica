@@ -5,5 +5,4 @@ class Group < ApplicationRecord
   has_many :habits, through: :group_habits
 
   validates :name, uniqueness: true
-  validates :name, presence: true
 end

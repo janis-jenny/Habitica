@@ -2,10 +2,9 @@
 
 <div class="container">
     <% habits.each do |habit| %>
-      <% if habit.user_id == current_user.id %>
         <div class="box mb-2">
           <div class="habit_icon">
-            <%=image_tag(url_for(group_icons(habit)))%>
+            <%# <%=image_tag(url_for(group_icons(habit)))%>
           </div>
           <div class="info">
             <h5 class='item-name'><%= habit.name%></h5>
@@ -16,6 +15,5 @@
             <% end %>
           </div>
         </div>
-      <%end%> 
     <% end %>
 </div>

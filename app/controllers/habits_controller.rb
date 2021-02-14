@@ -29,13 +29,16 @@ class HabitsController < ApplicationController
   end
 
   def external_habits
-    a = Group.where(name: '')
+=begin a = Group.where(name: '')
     group = a[0]
     @habits = if !group.nil?
                 group.habits
               else
                 []
               end
+=end
+    groups = Group.where(name: '')
+    @habits = groups.map { |g| g.habits}
   end
 
   private

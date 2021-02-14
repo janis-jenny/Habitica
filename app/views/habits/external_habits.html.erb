@@ -3,7 +3,7 @@
   <br>
   <h1 class="nav-title pt-5">External Habits</h1>
  
-  <%= render 'external_habit_list', {habits: @habits}  %>
+  <%= render 'habit_list_external', {habits: @habits}  %>
 
   <%= link_to raw("<span>New Habit</span>"), new_habit_path, method: 'get', class: 'new-btn' %>
 </div>

@@ -4,7 +4,7 @@
   <h4 class="nav-title pt-5">My Total Habits:</h4><p><%="#{total_hours} hours"%></p>
   <% total_hours %>
 
-  <%= render 'external_habit_list', {habits: @habits}  %> 
+  <%= render 'habit_list_index', {habits: @habits}  %> 
 
   <%= link_to raw("<span>New Habit</span>"), new_habit_path, method: 'get', class: 'new-btn' %>
 </div>

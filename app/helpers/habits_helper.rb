@@ -24,6 +24,11 @@ module HabitsHelper
       link_to day.to_s, repeat_days_path(day: day.to_s, habit_id: habit.id), class: 'btn-save my-5 rounded', method: :post
     end
   end
+
+  def habits_user
+    Habit.where(user_id: current_user.id)
+  end
+  
 end
 
 # rubocop:enable Lint/ShadowingOuterLocalVariable
