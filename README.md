@@ -54,6 +54,7 @@ You can track the days and the time per habit and check the total of time that y
 
 - Ruby gem RSpec
 - Ruby gem capybara
+- Ruby gem Shoulda Matchers
 
 ## 📝 Pre-requisites
 

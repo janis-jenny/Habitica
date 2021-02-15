@@ -8,18 +8,20 @@
   <div class="container_box">
     <% habits_user.each do |habit| %>
       <% habit.habits.each do |h| %>
-        <div class="box">
-          <div class="habit_icon">
-          <%=image_tag(url_for(group_icons(h)))%>
-          </div>
-          <div class="info">
-            <h5 class='item-name'><%= h.name%></h5>
-            <p><%= "Created at #{format_date(h.created_at.to_date)}"%></p>
-            <p><%= "Minutes: #{h.time} minutes" %></p>
-            <% frequency_days(h.repeat_days).each do |el| %>
-            <span class="flex-row"> <%=el%></span>
-            <% end %>
-          </div>
+        <%if h.user_id == current_user.id%>
+          <div class="box">
+            <div class="habit_icon">
+            <%=image_tag(url_for(group_icons(h)))%>
+            </div>
+            <div class="info">
+              <h5 class='item-name'><%= h.name%></h5>
+              <p><%= "Created at #{format_date(h.created_at.to_date)}"%></p>
+              <p><%= "Minutes: #{h.time} minutes" %></p>
+              <% frequency_days(h.repeat_days).each do |el| %>
+              <span class="flex-row"> <%=el%></span>
+              <% end %>
+            </div>
+          <%end%>
         </div>
       <%end%>
     <%end%>
