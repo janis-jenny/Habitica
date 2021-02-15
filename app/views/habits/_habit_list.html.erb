@@ -1,0 +1,18 @@
+<div>
+  <h2 class="nav-title">My Habits:</h2>
+  <% habits.each do |habit| %>
+    
+    <div class="info-group">            
+      <h5 class="mb-0"><%= habit.name %>
+      </h5>
+      <p><%= "Created at: #{format_date(habit.created_at.to_date)}"%></p>
+      <p><%= "Minutes: #{habit.time} minutes" %></p>
+      <p>Days:<% frequency_days(habit.repeat_days).each do |el| %>
+        <%=el%>
+      <% end %></p> 
+      <p><%="Total time: #{habit.time * habit.repeat_days.count} minutes"%></p>
+    </div>
+  <% end %>
+</div>
+
+

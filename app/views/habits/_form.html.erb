@@ -1,0 +1,20 @@
+<%= form_with(model: @habit, local: true) do |f| %>
+<p id="alert"> <%= alert %> </p>
+
+  <div>
+    <%= f.label :group_id, "Group:" %>
+    <%= f.collection_select :group_id, Group.order(:name), :id, :name, class: 'name-input rounded' %>
+  </div>
+  <br>
+  <div>
+    <%= f.label :name, "Name:" %>
+    <%= f.text_field :name, class: 'name-input rounded'%>
+  </div>
+  <div>
+    <%= f.label :time, "Time:" %>
+    <%= f.number_field :time, placeholder: 'Time(minutes)', class: 'name-input rounded'%>
+  </div>
+  <div>
+    <%= f.submit 'Select frequency', class: 'btn-submit rounded mt-2 mx-0' %>
+  </div>
+<% end %>

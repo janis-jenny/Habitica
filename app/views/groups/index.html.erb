@@ -1,0 +1,24 @@
+<div class="habits">
+  <%= render 'common_share/navbar' %>
+  <br>
+  <h4 class="nav-title pt-5">My Groups</h4>
+    <div class="container_box">
+      <% @groups.each do |group| %>
+        <% date = group.created_at.to_date %>
+        <%=link_to group_path(group.id) do %>
+          <div class="box">
+            <div class="group-icons">
+              <%=image_tag(group_icon(group))%>
+            </div>
+            <div class="info-group">
+              <p class="mb-0"><%= group.name %></p>
+              <p class="mb-0">Created at: <%=format_date(date)%></p> 
+              <p class="mb-0">Created by: <%=group.user.name%></p>
+            </div>
+          </div>
+        <%end%>
+      <% end %>
+    </div>
+
+  <%=link_to raw("<span>New Group</span>"), new_group_path, method: 'get', class: 'new-btn' %>
+</div>

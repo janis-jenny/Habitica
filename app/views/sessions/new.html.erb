@@ -1,0 +1,18 @@
+<nav class='nav d-flex align-items-center'>
+      <%= link_to root_path, class: 'left-btn' do %>
+       <i class='fas fa-arrow-circle-left text-white px-2'></i>
+      <%end%>
+</nav>
+<br>
+<br>
+<p id="alert"><%= alert %></p>
+<br>
+<div>
+  <h2 class="nav-title">Log in
+  </h2>
+  <%= form_tag login_path do |f| %>
+    <%= label_tag :name, nil, class: 'mx-1' %>
+    <%= text_field_tag :name, nil, class: 'name-input rounded' %>
+    <%= submit_tag "Sign in", class: 'btn-submit rounded mt-2 mx-0' %>
+  <%end%>
+</div>

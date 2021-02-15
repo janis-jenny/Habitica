@@ -1,0 +1,44 @@
+// Place all the styles related to the Groups controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+$main-color: #3778c2;
+$second-color: #5fb523;
+$text-color: #434b54;
+
+/* GROUPS VIEW */
+
+.group-icons {
+  width: 26%;
+  position: relative;
+  height: 80px;
+  margin-bottom: 5px;
+  border: $second-color solid 2px;
+
+  img {
+    object-fit: fill;
+    height: 75px;
+    width: 99px;
+  }
+}
+
+.info-group {
+  color: $text-color;
+  margin-top: 10px;
+  margin-left: 12px;
+}
+
+.group-icon {
+  margin-top: 20px;
+  position: relative;
+  left: 9.7rem;
+  width: 28%;
+  height: 108px;
+  border: $second-color solid 2px;
+
+  img {
+    object-fit: fill;
+    height: 104px;
+    width: 115px;
+  }
+}

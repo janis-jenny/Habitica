@@ -1,0 +1,18 @@
+<div>
+<%= render 'common_share/navbar' %>
+<br>
+<h1 class="nav-title pt-5">New Group
+</h1>
+<%= form_with(model: @group, local: true) do |form| %>
+  <div>
+    <%= form.label :name, "Name:" %>
+    <%= form.text_field :name, class: 'name-input rounded' %>
+  </div>
+
+  <div>
+    <%= form.label :avatar, "Avatar:" %>
+    <%= form.file_field :avatar, class: 'name-input rounded' %>
+  </div>
+  <%= form.submit "Create", class: 'btn-submit rounded mt-2 mx-1' %>
+<% end %>
+</div>

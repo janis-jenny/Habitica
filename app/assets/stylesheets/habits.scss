@@ -1,0 +1,74 @@
+// Place all the styles related to the Habits controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+$second-color: #5fb523;
+
+/* HABITS VIEW */
+
+.habits {
+  height: 100%;
+  margin: 0 auto;
+
+  .new-btn {
+    width: 28rem;
+    padding: 1.5rem 0;
+    position: absolute;
+    bottom: 0;
+    right: 0.1rem;
+    left: 0;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 300;
+    background-color: $second-color;
+    border: none;
+    cursor: pointer;
+
+    span {
+      border: 1px #fff solid;
+      padding: 0.5rem 32%;
+      border-radius: 5px;
+    }
+  }
+}
+
+.container_box {
+  overflow-y: scroll;
+  position: absolute;
+  width: 35%;
+  max-height: 65%;
+}
+
+.box {
+  display: flex;
+  margin-left: 15px;
+  margin-right: 5px;
+  margin-bottom: 3px;
+
+  .habit_icon {
+    width: 24%;
+    height: 80px;
+    position: relative;
+    border: $second-color solid 2px;
+
+    img {
+      object-fit: fill;
+      height: 75px;
+      width: 95px;
+    }
+  }
+
+  .info {
+    margin: 0 auto;
+    position: relative;
+
+    .item-name {
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<div>
+  <%= render 'common_share/navbar' %>
+  <br>
+  <br>
+  <p id="alert"><%= alert %></p>
+  <br>
+  <h2 class="nav-title">Edit Account
+  </h2>
+  <%= form_for @user, url: {action: "update"} do |f| %>
+    Name: <%= f.text_field :name, placeholder: "Only first name", class: 'name-input rounded' %><br/>
+    Avatar: <%= f.file_field :avatar, class: 'name-input rounded'%>
+  <%= f.submit "Edit", class: 'btn-submit rounded mt-2 mx-5' %>
+  <% end %>
+</div>
