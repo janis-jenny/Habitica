@@ -1,7 +1,6 @@
 # rubocop:disable Lint/ShadowingOuterLocalVariable
 # rubocop:disable Layout/LineLength
 module HabitsHelper
-  
   def frequency_days(param)
     arr = []
     param.each do |el|
@@ -30,12 +29,12 @@ module HabitsHelper
     habits_with_groups = Habit.where(user_id: current_user.id)
     habits_with_groups.each do |h|
       h.groups.each do |g|
-      arr << g if g.name != ""
+        arr << g if g.name != ''
       end
     end
     arr
   end
-  
+
   def external_habits(groups)
     arr = []
     groups.each do |g|

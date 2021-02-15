@@ -76,31 +76,31 @@ end
 
 RSpec.describe Habit, type: :model do
   describe 'associations' do
-    it { should have_many(:group_habits)}
+    it { should have_many(:group_habits) }
   end
   describe 'associations' do
-    it { should belong_to(:user)}
+    it { should belong_to(:user) }
   end
 end
 
 RSpec.describe User, type: :model do
   describe 'associations' do
-    it { should have_many(:habits)}
+    it { should have_many(:habits) }
   end
   describe 'associations' do
-    it { should have_many(:groups)}
+    it { should have_many(:groups) }
   end
 end
 
 RSpec.describe Group, type: :model do
   describe 'associations' do
-    it { should have_many(:group_habits)}
+    it { should have_many(:group_habits) }
   end
   describe 'associations' do
-    it { should have_many(:habits)}
+    it { should have_many(:habits) }
   end
   describe 'associations' do
-    it { should belong_to(:user)}
+    it { should belong_to(:user) }
   end
 end
 # rubocop:enable Lint/UselessAssignment

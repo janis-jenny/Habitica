@@ -30,7 +30,7 @@ class HabitsController < ApplicationController
 
   def external_habits
     groups = Group.where(name: '')
-    @habits = groups.map { |g| g.habits}
+    @habits = groups.map(&:habits)
   end
 
   private
