@@ -26,9 +26,25 @@ module HabitsHelper
   end
 
   def habits_user
-    Habit.where(user_id: current_user.id)
+    arr = []
+    habits_with_groups = Habit.where(user_id: current_user.id)
+    habits_with_groups.each do |h|
+      h.groups.each do |g|
+      arr << g if g.name != ""
+      end
+    end
+    arr
   end
   
+  def external_habits(groups)
+    arr = []
+    groups.each do |g|
+      g.each do |el|
+        arr << el
+      end
+    end
+    arr
+  end
 end
 
 # rubocop:enable Lint/ShadowingOuterLocalVariable

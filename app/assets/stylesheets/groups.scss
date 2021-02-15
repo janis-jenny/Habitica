@@ -10,8 +10,9 @@ $text-color: #434b54;
 
 .group-icons {
   width: 26%;
+  position: relative;
   height: 80px;
-  margin-bottom: 7px;
+  margin-bottom: 5px;
   border: $second-color solid 2px;
 
   img {

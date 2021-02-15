@@ -1,10 +1,30 @@
 <div class="habits">  
   <%= render 'common_share/navbar' %>
   <br>
+  <p id="notice"><%= notice %></p>
   <h4 class="nav-title pt-5">My Total Habits:</h4><p><%="#{total_hours} hours"%></p>
   <% total_hours %>
 
-  <%= render 'habit_list_index', {habits: @habits}  %> 
+  <div class="container_box">
+    <% habits_user.each do |habit| %>
+      <% habit.habits.each do |h| %>
+        <div class="box">
+          <div class="habit_icon">
+          <%=image_tag(url_for(group_icons(h)))%>
+          </div>
+          <div class="info">
+            <h5 class='item-name'><%= h.name%></h5>
+            <p><%= "Created at #{format_date(h.created_at.to_date)}"%></p>
+            <p><%= "Minutes: #{h.time} minutes" %></p>
+            <% frequency_days(h.repeat_days).each do |el| %>
+            <span class="flex-row"> <%=el%></span>
+            <% end %>
+          </div>
+        </div>
+      <%end%>
+    <%end%>
+    
+  </div>
 
   <%= link_to raw("<span>New Habit</span>"), new_habit_path, method: 'get', class: 'new-btn' %>
 </div>

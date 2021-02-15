@@ -2,17 +2,18 @@
   <%= render 'common_share/navbar' %>
   <br>
   <br>
-  <br>
-  <div class="group-icon">
-    <img src= <%= group_icon(@group) %>>
-  </div>
-  <br><br>
-  <div class="info-group"> 
-    <h5>Group: <%= @group.name%></h5>
-    <p class="m-0 pb-1">Created at: <%= "#{format_date(@group.created_at.to_date)}"%></p>
-    <p class="m-0 pt-1">Created by: <%= @group.user.name%></p>
-  </div>
-  <%= render 'habits/habit_list', {habits: @habits} %>
+  <div class="container_box mt-4">
+  
+    <div class="group-icon">
+      <img src= <%= group_icon(@group) %>>
+    </div>
+    <div class="info-group"> 
+      <h5>Group: <%= @group.name%></h5>
+      <p class="m-0 pb-1">Created at: <%= "#{format_date(@group.created_at.to_date)}"%></p>
+      <p class="m-0 pt-1">Created by: <%= @group.user.name%></p>
+    </div>
+    <%= render 'habits/habit_list', {habits: @habits} %>
+  </div> 
   <p><%=link_to raw("<span>Add Habit</span>"), new_habit_path(group: @group.id), method: 'get', class: 'new-btn' %></p>
 </div>
 
