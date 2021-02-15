@@ -32,7 +32,7 @@ module HabitsHelper
         arr << g if g.name != ''
       end
     end
-    arr
+    arr.uniq
   end
 
   def external_habits(groups)
