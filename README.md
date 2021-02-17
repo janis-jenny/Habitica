@@ -27,7 +27,7 @@
 
 ## 👩🏼‍💻 About Habitica
 
-You can track the days and the time per habit and check the total of time that you dedicate to all of them. Users are allowed to upload their own avatar as a profile photo and also they can do the same to each group in order to best represent the type of habit they are tracking, if so the app will display a default icon instead. Each user's experience can be custom-tailored to their needs.<br>
+You can track the days and the time per habit and check the total of time that you dedicate to all of them. Users are allowed to upload their own avatar as a profile photo and also they can do the same to each group in order to best represent the type of habit they are tracking, otherwise, the app will display a default icon instead.<br>
 
 
 ![screenshot](app/assets/images/Screenshot1.jpg)
