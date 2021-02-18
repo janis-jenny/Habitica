@@ -8,7 +8,7 @@
         <%=link_to group_path(group.id) do %>
           <div class="box">
             <div class="group-icons">
-              <%=image_tag(group_icon(group))%>
+              <%=image_tag(url_for(group_icon(group)))%>
             </div>
             <div class="info-group">
               <p class="mb-0"><%= group.name %></p>

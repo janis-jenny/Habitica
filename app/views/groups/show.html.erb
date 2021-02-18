@@ -5,7 +5,7 @@
   <div class="container_box mt-4">
   
     <div class="group-icon">
-      <img src= <%= group_icon(@group) %>>
+      <%=image_tag(url_for(group_icon(@group)))%>
     </div>
     <div class="info-group"> 
       <h5>Group: <%= @group.name%></h5>

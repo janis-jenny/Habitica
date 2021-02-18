@@ -5,7 +5,7 @@
 #
 #   movies = H.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.create(name: 'Jenny');
+User.create(name: 'Jenny', image: 'myavatar.jpg');
 User.create(name: 'User1');
 
 p User.all.count
@@ -15,6 +15,21 @@ GroupHabit.create(habit_id: Habit.first.id, group_id: Group.first.id);
 RepeatDay.create(day: 'Monday', habit_id: Habit.first.id, user_id: User.first.id);
 
 Habit.create(user_id: User.first.id, name: 'Habit2', time: 30);
-Group.create(name: 'Mindfulness', user_id: User.first.id)
+Group.create(name: 'Mindfulness', user_id: User.first.id, image: 'mindfulness.jpg');
 GroupHabit.create(habit_id: Habit.second.id, group_id: Group.second.id)
 RepeatDay.create(day: 'Friday', habit_id: Habit.second.id, user_id: User.first.id)
+
+Habit.create(user_id: User.first.id, name: 'Habit3', time: 60);
+Group.create(name: 'Connect', user_id: User.first.id, image: 'connect.jpg');
+GroupHabit.create(habit_id: Habit.third.id, group_id: Group.third.id)
+RepeatDay.create(day: 'Saturday', habit_id: Habit.third.id, user_id: User.first.id)
+
+Habit.create(user_id: User.first.id, name: 'Habit4', time: 80);
+Group.create(name: 'Enterteiment', user_id: User.first.id, image: 'enterteiment.jpg');
+GroupHabit.create(habit_id: Habit.fourth.id, group_id: Group.fourth.id)
+RepeatDay.create(day: 'Saturday', habit_id: Habit.fourth.id, user_id: User.first.id)
+
+Habit.create(user_id: User.first.id, name: 'Habit5', time: 80);
+Group.create(name: 'Self Care', user_id: User.first.id, image: 'self care.jpeg');
+GroupHabit.create(habit_id: Habit.fifth.id, group_id: Group.fifth.id)
+RepeatDay.create(day: 'Saturday', habit_id: Habit.fifth.id, user_id: User.first.id)

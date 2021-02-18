@@ -11,7 +11,13 @@ module HabitsHelper
 
   def group_icons(habit)
     img = habit.groups.first
-    !img.avatar.attached? ? 'icon.png' : img.avatar
+    if img.avatar.attached?
+      img.avatar
+    elsif img.image
+      img.image
+    else
+      'icon.png'
+    end
   end
 
   def select_days(habit, day)

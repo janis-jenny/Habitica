@@ -1,5 +1,11 @@
 module GroupsHelper
   def group_icon(group)
-    group.avatar.attached? ? url_for(group.avatar) : '/icon.png'
+    if group.avatar.attached?
+      group.avatar
+    elsif group.image
+      group.image
+    else
+      'icon.png'
+    end
   end
 end
