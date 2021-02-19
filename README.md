@@ -38,7 +38,7 @@ You can track the days and the time per habit and check the total of time that y
 
 ## 🔴 Live Demo:
 
-[www.habitica.com](https://glacial-taiga-23445.herokuapp.com/)
+[www.habitica.com](https://cryptic-escarpment-27413.herokuapp.com/)
 
 ## 🔧 Built with
 
@@ -90,7 +90,7 @@ To get a local copy up and running follow these simple steps:
 1. Open the terminal and go to the directory.
 2. Start the application : `rails server`.
 3. Open the browser and go to : `http://localhost:3000/`
-4. Optional: use the [live version link](https://glacial-taiga-23445.herokuapp.com/)
+4. Optional: use the [live version link](https://cryptic-escarpment-27413.herokuapp.com/)
 4. Enjoy the different functions the App has.
 
 ## 👥 Author
