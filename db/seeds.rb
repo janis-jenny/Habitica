@@ -30,6 +30,6 @@ GroupHabit.create(habit_id: Habit.fourth.id, group_id: Group.fourth.id)
 RepeatDay.create(day: 'Saturday', habit_id: Habit.fourth.id, user_id: User.first.id)
 
 Habit.create(user_id: User.first.id, name: 'Habit5', time: 80);
-Group.create(name: 'Self Care', user_id: User.first.id, image: 'self care.jpeg');
+Group.create(name: 'Self Care', user_id: User.first.id, image: 'self_care.jpeg');
 GroupHabit.create(habit_id: Habit.fifth.id, group_id: Group.fifth.id)
 RepeatDay.create(day: 'Saturday', habit_id: Habit.fifth.id, user_id: User.first.id)
